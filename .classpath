@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/JavaLibs/com.ibm.mq/com.ibm.dhbcore.jar"/>
+	<classpathentry kind="lib" path="C:/JavaLibs/com.ibm.mq/com.ibm.mq.jar"/>
+	<classpathentry kind="lib" path="C:/JavaLibs/com.ibm.mq/com.ibm.mqjms.jar"/>
+	<classpathentry kind="lib" path="C:/JavaLibs/com.ibm.mq/javax.jms.jar"/>
+	<classpathentry kind="lib" path="C:/JavaLibs/gears/gears.jar"/>
+	<classpathentry kind="lib" path="C:/JavaLibs/jdom/jdom-2.0.6/jdom-2.0.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

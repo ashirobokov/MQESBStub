@@ -1,0 +1,90 @@
+апр 07, 2016 11:22:17 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Содержимое конфигурации {CCSID=1251, port=1415, host=localhost, channel=SYSTEM.DEF.SVRCONN, qManager=STUB.MQ.MAN, queueOut=QUEUE.OUT, thread=2, queueIn=QUEUE.IN}
+апр 07, 2016 11:22:17 AM ru.ashirobokov.app.gears.LoggerTools loggerInfo
+INFO: SBRF ESB эмулятор работает в потоке 11 [pool-1-thread-2]
+апр 07, 2016 11:22:17 AM ru.ashirobokov.app.gears.LoggerTools loggerInfo
+INFO: SBRF ESB эмулятор работает в потоке 10 [pool-1-thread-1]
+апр 07, 2016 11:23:28 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Данные из запроса [6935953f3d8f432c8c63276159358a8b,2016-03-25T15:02:58Z,urn:sbrfsystems:99-sbrfsite,urn:sbrfsystems:99-crmorg]
+апр 07, 2016 11:23:28 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :respFile : <?xml version="1.0" encoding="UTF-8"?>
+<CreateLegalLeadApplicationWithClientRs>
+    <RqUID>6935953f3d8f432c8c63276159358a8b</RqUID>
+    <RqTm>2016-04-07T11:23:28Z</RqTm>
+    <SPName>urn:sbrfsystems:99-sbrfsite</SPName>
+    <SystemId>urn:sbrfsystems:99-crmorg</SystemId>
+    <Method>SitetoCRMCreateApplication</Method>
+	<Status>
+        <StatusCode>0</StatusCode>
+    </Status>
+	<Application>
+		<ApplicationNumber>123456</ApplicationNumber>
+		<ApplicationCRMId>CRM-ID-000123</ApplicationCRMId>
+	</Application>
+</CreateLegalLeadApplicationWithClientRs>
+
+апр 07, 2016 11:23:28 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Сообщение обработано потоком 11 [pool-1-thread-2]
+апр 07, 2016 11:23:58 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Данные из запроса [6935953f3d8f432c8c63276159358a8b,2016-03-25T15:02:58Z,urn:sbrfsystems:99-sbrfsite,urn:sbrfsystems:99-crmorg]
+апр 07, 2016 11:23:58 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :respFile : <?xml version="1.0" encoding="UTF-8"?>
+<CreateLegalLeadApplicationWithClientRs>
+    <RqUID>6935953f3d8f432c8c63276159358a8b</RqUID>
+    <RqTm>2016-04-07T11:23:58Z</RqTm>
+    <SPName>urn:sbrfsystems:99-sbrfsite</SPName>
+    <SystemId>urn:sbrfsystems:99-crmorg</SystemId>
+    <Method>SitetoCRMCreateApplication</Method>
+	<Status>
+        <StatusCode>0</StatusCode>
+    </Status>
+	<Application>
+		<ApplicationNumber>123456</ApplicationNumber>
+		<ApplicationCRMId>CRM-ID-000123</ApplicationCRMId>
+	</Application>
+</CreateLegalLeadApplicationWithClientRs>
+
+апр 07, 2016 11:23:58 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Сообщение обработано потоком 10 [pool-1-thread-1]
+апр 07, 2016 11:24:06 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Данные из запроса [6935953f3d8f432c8c63276159358a8b,2016-03-25T15:02:58Z,urn:sbrfsystems:99-sbrfsite,urn:sbrfsystems:99-crmorg]
+апр 07, 2016 11:24:06 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :respFile : <?xml version="1.0" encoding="UTF-8"?>
+<CreateLegalLeadApplicationWithClientRs>
+    <RqUID>6935953f3d8f432c8c63276159358a8b</RqUID>
+    <RqTm>2016-04-07T11:24:06Z</RqTm>
+    <SPName>urn:sbrfsystems:99-sbrfsite</SPName>
+    <SystemId>urn:sbrfsystems:99-crmorg</SystemId>
+    <Method>SitetoCRMCreateApplication</Method>
+	<Status>
+        <StatusCode>0</StatusCode>
+    </Status>
+	<Application>
+		<ApplicationNumber>123456</ApplicationNumber>
+		<ApplicationCRMId>CRM-ID-000123</ApplicationCRMId>
+	</Application>
+</CreateLegalLeadApplicationWithClientRs>
+
+апр 07, 2016 11:24:06 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Сообщение обработано потоком 11 [pool-1-thread-2]
+апр 07, 2016 11:24:13 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Данные из запроса [6935953f3d8f432c8c63276159358a8b,2016-03-25T15:02:58Z,urn:sbrfsystems:99-sbrfsite,urn:sbrfsystems:99-crmorg]
+апр 07, 2016 11:24:13 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :respFile : <?xml version="1.0" encoding="UTF-8"?>
+<CreateLegalLeadApplicationWithClientRs>
+    <RqUID>6935953f3d8f432c8c63276159358a8b</RqUID>
+    <RqTm>2016-04-07T11:24:13Z</RqTm>
+    <SPName>urn:sbrfsystems:99-sbrfsite</SPName>
+    <SystemId>urn:sbrfsystems:99-crmorg</SystemId>
+    <Method>SitetoCRMCreateApplication</Method>
+	<Status>
+        <StatusCode>0</StatusCode>
+    </Status>
+	<Application>
+		<ApplicationNumber>123456</ApplicationNumber>
+		<ApplicationCRMId>CRM-ID-000123</ApplicationCRMId>
+	</Application>
+</CreateLegalLeadApplicationWithClientRs>
+
+апр 07, 2016 11:24:13 AM ru.ashirobokov.app.gears.LoggerTools loggerDebug
+CONFIG: [DEBUG] :Сообщение обработано потоком 10 [pool-1-thread-1]
