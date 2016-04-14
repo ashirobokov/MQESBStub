@@ -2,6 +2,9 @@ package ru.mq.esb.stub;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.logging.Logger;
+
+import ru.ashirobokov.app.gears.LoggerTools;
 
 public class MainMQReceiver {
 	
@@ -10,6 +13,7 @@ public static Factory factory;
 
 	public static void main(String[] args) {
 
+			LoggerTools.loggerInfo(MainMQReceiver.class.getName(), "MQ Stub started");
 
 			settings = new Settings();
 
