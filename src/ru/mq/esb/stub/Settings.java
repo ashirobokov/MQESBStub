@@ -18,7 +18,7 @@ public class Settings {
 			mapConFactorySettings = FileUtil.fromFileToMap(".\\settings.cfg");
 			
 		} catch (IOException e) {
-			LoggerTools.loggerError(Factory.class.getName(), "Не удалось считать и подготовить конфигурационные данные из файла .\\settings.cfg");
+			LoggerTools.loggerError(Settings.class.getName(), "Не удалось считать и подготовить конфигурационные данные из файла .\\settings.cfg");
 			e.printStackTrace();
 		}
 
@@ -40,7 +40,7 @@ public class Settings {
 	    if (mapConFactorySettings.containsKey(key))
 	        value = (String) mapConFactorySettings.get(key);
 	    else {
-			LoggerTools.loggerError(Factory.class.getName(), "Свойство с ключем " + key + " не найдено");
+			LoggerTools.loggerError(Settings.class.getName(), "Свойство с ключем " + key + " не найдено");
 	    }
 	    return value;
 	 }
