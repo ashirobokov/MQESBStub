@@ -32,11 +32,13 @@ public class CRMCorpListener implements MessageListener {
 	private Receiver receiver;
 	private static final String reqFile = ".\\samples\\CreateLegalLeadApplicationWithClientRs.xml";
 	
-	public CRMCorpListener(Receiver receiver) {
-		
-		this.receiver = receiver;
+
+public CRMCorpListener(Receiver receiver) {
 	
-	}
+	this.receiver = receiver;
+
+}
+	
 	
 	@Override
 	public void onMessage(Message message) {
@@ -44,13 +46,10 @@ public class CRMCorpListener implements MessageListener {
 		try {
 			
 			QueueSession session = this.receiver.getQueueConnection().createQueueSession(false, QueueSession.AUTO_ACKNOWLEDGE);
-			
-			Queue queue = session.createQueue(this.receiver.getFactory().queueOut);
-			
+			Queue queue = session.createQueue(Factory.getInstance().getQueueOut());
 			QueueSender sender = session.createSender(queue); 
 
 			TextMessage reqMessage = (TextMessage) message;
-			
 			InputStream msgStream = new ByteArrayInputStream(reqMessage.getText().getBytes("UTF-8"));
 			
 			SAXBuilder reqBuilder = new SAXBuilder();

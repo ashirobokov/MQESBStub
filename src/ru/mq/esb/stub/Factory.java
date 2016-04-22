@@ -8,36 +8,34 @@ import com.ibm.mq.jms.MQQueueConnectionFactory;
 
 public class Factory {
 
-//  Фабрика подключения к MQ	
-	public MQQueueConnectionFactory factory = null;
-//  Имя менеджера очередей
-	public String qManagerName;
-//	Очередь из которой принимаем сообщения	
-	public String queueIn;
-//	Очередь в которую отправляем сообщения	
-	public String queueOut;
+	private static Factory _factory = null;
+
+	private static MQQueueConnectionFactory wmqFactory = null;	
+	private static String qManagerName;
+	private static String queueIn;
+	private static String queueOut;
 	
 /*
  * 		Создание фабрики очередей
  */
-public Factory(Settings settings) {
+public Factory() {
 
 	try {
 	
-			qManagerName = new String(settings.getQManagerName());
-			queueIn = new String(settings.getQueueIn());
-			queueOut = new String(settings.getQueueOut());
+		qManagerName = Settings.getInstance().getProperty("qManager");
+		queueIn = Settings.getInstance().getProperty("queueIn");
+		queueOut = Settings.getInstance().getProperty("queueOut");
 			
-			factory = new MQQueueConnectionFactory();
-			
-			factory.setCCSID(settings.getCCSID());
-	
-			factory.setHostName(settings.getHost());
-			factory.setPort(settings.getPort());
-			factory.setQueueManager(qManagerName);
-			factory.setChannel(settings.getChannel());
+		wmqFactory = new MQQueueConnectionFactory();
+		
+		wmqFactory.setCCSID(Integer.parseInt(Settings.getInstance().getProperty("CCSID")));
 
-	//	factory.setTransportType(WMQConstants. WMQ_CM_CLIENT);
+		wmqFactory.setHostName(Settings.getInstance().getProperty("host"));
+		wmqFactory.setPort(Integer.parseInt(Settings.getInstance().getProperty("port")));
+		wmqFactory.setQueueManager(qManagerName);
+		wmqFactory.setChannel(Settings.getInstance().getProperty("channel"));
+
+	//	wmqFactory.setTransportType(WMQConstants. WMQ_CM_CLIENT);
 
 		} catch (JMSException e) {
 
@@ -45,6 +43,37 @@ public Factory(Settings settings) {
 		
 		}
 
+}
+
+	public static Factory getInstance() {
+	    if (_factory == null)
+	    	 synchronized (Factory.class) {
+	    		 if (_factory == null)
+	    			 _factory = new Factory();
+	    	 }	 
+	    return _factory;
+	 }
+	
+	
+	public synchronized MQQueueConnectionFactory getWMQFactory() {
+		
+	return wmqFactory;
+	}
+	
+	
+	public synchronized String getQManagerName() {
+		
+	return qManagerName;
+	}
+	
+	public synchronized String getQueueIn() {
+		
+	return queueIn;
+	}
+	
+	public synchronized String getQueueOut() {
+		
+	return queueOut;
 	}
 
 }

@@ -23,18 +23,8 @@ private MQQueueConnectionFactory mqFactory;
 private QueueConnection con;
 private MessageListener listener;
 private QueueSession session;
-private Factory factory;
 private String tName;
 
-public Receiver(Factory factory) {
-
-	this.factory = factory;
-}
-
-public Factory getFactory() {
-	
-	return this.factory;
-}
 
 public QueueConnection getQueueConnection() {
 	
@@ -58,18 +48,13 @@ public String getThreadName() {
 			 try {
 					
 
-				 	mqFactory = this.factory.factory;
+				 	mqFactory = Factory.getInstance().getWMQFactory();
 				 
 					con = mqFactory.createQueueConnection();
-					
 					session = con.createQueueSession(false, QueueSession.AUTO_ACKNOWLEDGE);
-					
-					Queue reqQueue = session.createQueue(this.factory.queueIn);
-					
+					Queue reqQueue = session.createQueue(Factory.getInstance().getQueueIn());
 					QueueReceiver receiver = session.createReceiver(reqQueue);
-
 					listener = new CRMCorpListener(this);
-					
 					receiver.setMessageListener(listener);
 
 					con.start(); 
