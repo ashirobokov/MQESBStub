@@ -18,7 +18,7 @@ public class Factory {
 /*
  * 		Создание фабрики очередей
  */
-public Factory() {
+private Factory() {
 
 	try {
 	

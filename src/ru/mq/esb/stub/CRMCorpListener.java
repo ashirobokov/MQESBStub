@@ -90,7 +90,8 @@ public CRMCorpListener(Receiver receiver) {
 					resMessage.setJMSCorrelationID(reqMessage.getJMSMessageID());
 					sender.send(resMessage);					
 
-					LoggerTools.loggerDebug(CRMCorpListener.class.getName(), "Сообщение обработано потоком " + this.receiver.getThreadName());
+					System.out.println("Сообщение c rqUID " + reqUid + " обработано потоком " + this.receiver.getThreadName());
+//					LoggerTools.loggerDebug(CRMCorpListener.class.getName(), "Сообщение обработано потоком " + this.receiver.getThreadName());
 			}
 			else {
 		
