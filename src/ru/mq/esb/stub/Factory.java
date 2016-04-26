@@ -5,6 +5,7 @@ import javax.jms.JMSException;
 import ru.ashirobokov.app.gears.LoggerTools;
 
 import com.ibm.mq.jms.MQQueueConnectionFactory;
+import com.ibm.msg.client.wmq.WMQConstants;
 
 public class Factory {
 
@@ -35,7 +36,7 @@ private Factory() {
 		wmqFactory.setQueueManager(qManagerName);
 		wmqFactory.setChannel(Settings.getInstance().getProperty("channel"));
 
-	//	wmqFactory.setTransportType(WMQConstants. WMQ_CM_CLIENT);
+		wmqFactory.setTransportType(WMQConstants.WMQ_CM_CLIENT);
 
 		} catch (JMSException e) {
 
