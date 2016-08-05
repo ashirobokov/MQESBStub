@@ -1,8 +1,6 @@
 package ru.mq.esb.stub;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,8 +40,6 @@ public String getThreadName() {
 
 			LoggerTools.loggerInfo(Receiver.class.getName(), "SBRF ESB эмулятор работает" + " в потоке " + tName);
 			
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		    String stri=null;
 			
 			 try {
 					
@@ -59,27 +55,21 @@ public String getThreadName() {
 
 					con.start(); 
 
-					System.out.println("Введите 'quit' для завершения:");
-					while(true) {    
-				    	stri=new String(br.readLine());
-						if (stri.equals("quit")) {
-							System.out.println("Завершено");
-							break;
-						}
-					}    
-				
+					System.out.println("Введите 'quit' для завершения потока " + tName +  " :");
+
+					Scanner scn = new Scanner(System.in);
+					while(!scn.nextLine().equals("quit")) {}
+					
+					scn.close();
 					con.close();
+					
+					System.out.println("Поток " + tName + " остановлен");
 					
 				} catch (JMSException e) {
 					Logger.getLogger(Receiver.class.getName()).log(Level.SEVERE, null, e);
 //					e.printStackTrace();
 				
-				}   catch (IOException e) {
-					Logger.getLogger(Receiver.class.getName()).log(Level.SEVERE, null, e);
-//					e.printStackTrace();
-
-				} 
-
+				}  
 			
 		}
 		
